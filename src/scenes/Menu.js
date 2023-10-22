@@ -45,6 +45,7 @@ class Menu extends Phaser.Scene {
           gameTimer: 60000    
         }
         this.sound.play('sfx_select');
+        this.countdown = game.settings.gameTimer - new Date();
         this.scene.start("playScene");    
       }
       if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
@@ -54,7 +55,9 @@ class Menu extends Phaser.Scene {
           gameTimer: 45000    
         }
         this.sound.play('sfx_select');
+        this.countdown = game.settings.gameTimer - new Date();
         this.scene.start("playScene");    
       }
+      
     }
 }
