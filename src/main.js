@@ -8,7 +8,7 @@ Mod list:
   3. Implement a new timing/scoring mechanism that adds time to the clock for successful hits (5):  this.clock.elapsed -= 1000; in shipExplode
   4. Use Phaser's particle emitter to create a particle explosion when the rocket hits the spaceship (5): particleBoom function at the bottom of Play.js, used by shipExplode
   5. Allow the player to control the Rocket after it's fired (1): changed movement to if (true) instead of if (!this.isFiring)
-  6. Add your own (copyright-free) looping background music to the Play scene (keep the volume low and be sure that multiple instances of your music don't play when the game restarts) (1): added music when the scene is created, and stop it before another scene is created
+  6. Add your own (copyright-free) looping background music to the Play scene (1): added music when the scene is created, and stop it before another scene is created
 
 
 

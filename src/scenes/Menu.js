@@ -53,7 +53,7 @@ class Menu extends Phaser.Scene {
         // Expert mode
         game.settings = {
           spaceshipSpeed: 4,
-          gameTimer: 450    
+          gameTimer: 45000    
         }
         this.sound.play('sfx_select');
         this.countdown = game.settings.gameTimer - new Date();
