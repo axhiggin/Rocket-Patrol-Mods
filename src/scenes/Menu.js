@@ -8,6 +8,7 @@ class Menu extends Phaser.Scene {
       this.load.audio('sfx_select', './assets/blip_select12.wav');
       this.load.audio('sfx_explosion', './assets/explosion38.wav');
       this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
+      this.load.audio('music', './assets/Monkeys.mp3');
   }
 
   create() {
@@ -52,7 +53,7 @@ class Menu extends Phaser.Scene {
         // Expert mode
         game.settings = {
           spaceshipSpeed: 4,
-          gameTimer: 45000    
+          gameTimer: 450    
         }
         this.sound.play('sfx_select');
         this.countdown = game.settings.gameTimer - new Date();

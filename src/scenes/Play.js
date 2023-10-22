@@ -5,15 +5,21 @@ class Play extends Phaser.Scene {
     
     preload() {
         // load images/tile sprites
+        
         this.load.image('rocket', './assets/rocket.png');
         this.load.image('spaceship', './assets/spaceship.png');
         this.load.image('alien', './assets/LilAlien.png')
         this.load.image('starfield', './assets/starfield.png');
-        this.load.image('smiley', './assets/SMILEY.png')
+        this.load.image('smiley', './assets/SMILEY.png');
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
     }
 
     create() {
+       //adding music
+       this.bgm = this.sound.add('music', {loop:true});
+       this.bgm.play();
+
+      
        this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
         // green UI background
@@ -97,6 +103,7 @@ class Play extends Phaser.Scene {
       this.timeRight = this.add.text(borderUISize + borderPadding * 40, borderUISize + borderPadding * 2, Math.round((game.settings.gameTimer - this.clock.elapsed)/1000), scoreConfig)
       // check key input for restart
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)) {
+          this.bgm.stop();
           this.scene.restart();
       }
 
