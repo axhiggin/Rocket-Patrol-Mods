@@ -4,7 +4,8 @@ Mod Title: Rocket Patrol on Roids
 Time to complete:
 Mod list:
   1. Create a new enemy Spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (5): Added a lil alien spaceship that flies across the screen and is worth 50 points
-  2. 
+  2. Display the time remaining (in seconds) on the screen (3): Used this.clock.elapsed to keep track of time
+  3. 
 
 Citations:
 */
