@@ -9,6 +9,7 @@ class Play extends Phaser.Scene {
         this.load.image('spaceship', './assets/spaceship.png');
         this.load.image('alien', './assets/LilAlien.png')
         this.load.image('starfield', './assets/starfield.png');
+        this.load.image('smiley', './assets/SMILEY.png')
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
     }
 
@@ -154,10 +155,22 @@ class Play extends Phaser.Scene {
           ship.alpha = 1;                     // make ship visible again
           boom.destroy();                     // remove explosion sprite
         });
+        this.particleBoom(ship)
         // score add and repaint
+
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;
         this.clock.elapsed -= 1000;     
         this.sound.play('sfx_explosion');
+      }
+
+      particleBoom(ship){
+        this.add.particles(ship.x, ship.y, 'smiley', {
+          speed: 200,
+          lifespan: 200,
+          quantity: 1,
+          duration: 500,
+          maxParticles: 4
+        })
       }
   }
