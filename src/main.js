@@ -1,3 +1,15 @@
+/*
+Name: Aidan Higgins
+Mod Title: Rocket Patrol on Roids
+Time to complete:
+Mod list:
+  1.
+
+Citations:
+*/
+
+
+
 let config = {
     type: Phaser.AUTO,
     width: 640,
